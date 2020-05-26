@@ -1,0 +1,4 @@
+creacion entorno virtual
+pip install pipenv
+pipenv install
+pipenv install -r requirements.txt
