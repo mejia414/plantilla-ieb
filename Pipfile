@@ -23,6 +23,8 @@ pymongo = {extras = ["srv"],version = "*"}
 flask-pymongo = "*"
 wtforms = "*"
 flask-wtf = "*"
+sqlalchemy = "*"
+flask-sqlalchemy = "*"
 
 [requires]
 python_version = "3.8"

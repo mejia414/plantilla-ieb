@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% from 'macro.html' import super_macro_head %}
+{{ super_macro_head() }}
+
+<body>
+
+    {% from 'macro.html' import super_macro_jumbotron %}
+    {{ super_macro_jumbotron() }}
+
+    {% from 'macro.html' import super_macro_nav %}
+    {{ super_macro_nav() }}
+
+    {% block index %}
+    {% endblock %}
+
+    {% block about %}
+    {% endblock %}
+
+</body>
+
+
+</html>
