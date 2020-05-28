@@ -4,6 +4,9 @@
 {% from 'macro.html' import super_macro_head %}
 {{ super_macro_head() }}
 
+
+
+
 <body>
 
     {% from 'macro.html' import super_macro_jumbotron %}
@@ -17,6 +20,10 @@
 
     {% block about %}
     {% endblock %}
+
+    {% from 'macro.html' import super_macro_footer %}
+    {{ super_macro_footer() }}
+   
 
 </body>
 

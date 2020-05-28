@@ -5,9 +5,22 @@ from flask import render_template
 from flask import redirect
 from flask import request
 
+from wtforms import fields
+from wtforms import fields
+from wtforms import fields
+from wtforms import fields
+
+
+from flask_wtf import FlaskForm
+
+from flask_pymongo import PyMongo
+
 from flask_ngrok import run_with_ngrok
 
+
 app = Flask(__name__)
+
+
 
 
 @app.route('/', methods=['GET'])
@@ -34,6 +47,11 @@ def api():
 def about():
     response = jsonify
     return render_template('about.html')
+
+
+
+
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=4000, debug=True)
