@@ -5,18 +5,25 @@ from flask import render_template
 from flask import redirect
 from flask import request
 
-from wtforms import fields
-from wtforms import fields
-from wtforms import fields
-from wtforms import fields
-
-
 from flask_wtf import FlaskForm
 
 from flask_pymongo import PyMongo
 
 from flask_ngrok import run_with_ngrok
 
+
+from wtforms import Form
+from wtforms import StringField
+from wtforms import TextField
+from wtforms.fields.html5 import EmailField
+
+
+class miform(Form):
+    username = StringField('username')
+    email = EmailField('correo electronico')
+    comment = TextField('comentario')
+
+form_example=miform()
 
 app = Flask(__name__)
 
@@ -26,7 +33,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     response = jsonify
-    return render_template('index.html')
+    return render_template('index.html',form=form_example)
 
 @app.route('/download', methods=['GET'])
 def download():

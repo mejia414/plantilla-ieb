@@ -67,3 +67,8 @@
   </div>
 
 {% endmacro %}
+
+{% macro super_render_formulario(field) %}
+    <td>{{ field.label}}
+    <dd>{{ field(**kwargs)|safe }}
+{% endmacro %}
